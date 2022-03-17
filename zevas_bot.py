@@ -19,12 +19,14 @@ bot: telebot = telebot.TeleBot(API_KEY)
 
 @bot.message_handler(commands=["piadaComPery"])
 def pery_joke(message) -> None:
+    print(message)
     pery_joke_text = random.choice(pery_jokes)
     bot.send_message(message.chat.id, pery_joke_text)
 
 
 @bot.message_handler(commands=["start"])
 def start(message) -> None:
+    print(message)
     start_text = '''
 Clica no link ou digita no chat o comando que quiser executar:
 /piadaComPery
@@ -34,6 +36,7 @@ Clica no link ou digita no chat o comando que quiser executar:
 
 @bot.message_handler()
 def default_answer(message) -> None:
+    print(message)
     default_text = '''
 Fala tu, aqui é o Zevas!
 
