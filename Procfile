@@ -1,1 +1,1 @@
-worker: zevas_bot.py
+web: python3 zevas_bot.py
